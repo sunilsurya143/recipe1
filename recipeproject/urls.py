@@ -32,7 +32,7 @@ urlpatterns = [
     url(r'^backtolist/',views.backtolist,name='backtolist'),
     url(r'^backtoaddrecipe/',views.backtoaddrecipe,name='backtoaddrecipe'),
     url(r'^logout/',views.logoutpage,name='logout')
-    bjchvdhjs
+
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
