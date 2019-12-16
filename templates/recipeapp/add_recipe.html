@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+    <style>
+        tr{
+            height: 50px;
+        }
+        table{
+            color: red;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+<table align="center">
+    <tr>
+        <th><h2>Add a Recipe</h2></th>
+    </tr>
+    <form action="/addrecipe/" method="post">
+    {% csrf_token %}
+
+    <tr>
+        <th>
+            Recipe Name : <input type="text" required name="rname" placeholder="Recipe Name">
+        </th>
+    </tr>
+    <tr>
+        <th>
+            Cook Name : <input type="text" required name="cname" placeholder="Cook Name">
+        </th>
+    </tr>
+    <tr>
+        <th>
+            Ingrediants : <textarea name="ring" required placeholder="Ingrediants"></textarea>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            Process : <textarea name="rproc" required placeholder="Process"></textarea>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            time:
+        </th>
+    </tr>
+<!--
+    <tr>
+        <th>
+            <button type="submit">ImgUpload</button>
+        </th>
+    </tr>-->
+    <tr>
+        <th>
+            <input type="submit"  value="Add Recipe">
+        </th>
+    </tr>
+    </form>
+    <tr>
+        <th>
+            <center><a  href="/logout/" role="button">Logout</a></center>
+        </th>
+    </tr>
+</table>
+
+
+</body>
+</html>

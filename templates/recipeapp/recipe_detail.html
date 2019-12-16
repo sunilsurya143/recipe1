@@ -1,0 +1,17 @@
+
+<html>
+
+<body>
+<div class="container">
+  <h1 style="text-align: center">{{obj.recipe_name}} Details</h1>
+  <p>Cook Name : {{ obj.cook_name }}</p>
+  <p>Recipe Ingridents : {{ obj.recipe_ingrediants }}</p>
+  <hr>
+  <p>Recipe Process : {{ obj.recipe_process }}</p>
+  <center><a href="{% url 'backtolist' %}" role="button">Back</a></center>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+
+<html>
+<head>
+    <style>
+        table{
+            margin-left: 300px;
+        }
+        h2{
+            color: blue;
+        }
+
+    </style>
+</head>
+
+<body>
+<table>
+    <tr>
+        <th style="text-align: center">
+            <h2>Recipe's List</h2>
+        </th>
+    </tr>
+    {% for x in data %}
+        <tr>
+            <th>
+                <a href="/detail/{{ x.id }}">
+                     {{ x.recipe_name }}</a> -- Cook Name : {{ x.cook_name }}&emsp;<a href="/delete/{{ x.id }}">Delete</a>
+            </th>
+        </tr>
+    {% endfor %}
+<tr>
+    <th>
+        <center><a  href="{% url 'backtoaddrecipe' %}" role="button">Back</a></center>
+    </th>
+</tr>
+</table>
+{#{% endif %}#}
+</body>
+</html>

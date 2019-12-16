@@ -1,0 +1,44 @@
+
+<html>
+<head>
+<style>
+    tr{
+        height: 40px;
+    }
+    h2{
+        color: red;
+    }
+    table{
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    <table align="center">
+        <tr>
+            <th>
+                <h1>Login Form</h1>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                {{ form.as_p }}
+            </th>
+        </tr>
+        <tr>
+        <th>
+            <input type="submit" value="Login">
+        </th>
+    </tr><br>
+    <br>
+    <tr>
+        <th>
+            Already not a member &nbsp;? &ensp; <a href="/register/"> Register</a>
+        </th>
+    </tr>
+    </table>
+</form>
+</body>
+</html>
